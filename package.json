@@ -1,0 +1,26 @@
+{
+  "name": "mikrotik-express",
+  "version": "1.0.0",
+  "description": "Mikrotik Outbound Requests Test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muirurikabera/mikrotikexpress.git"
+  },
+  "keywords": [
+    "Mikrotik",
+    "Express"
+  ],
+  "author": "Kabera Muiruri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muirurikabera/mikrotikexpress/issues"
+  },
+  "homepage": "https://github.com/muirurikabera/mikrotikexpress#readme",
+  "devDependencies": {
+    "express": "^4.21.1"
+  }
+}
