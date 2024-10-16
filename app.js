@@ -1,7 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const mysql = require('mysql2/promise'); // Use mysql2 for promise support
+const mysql = require('mysql2/promise');
+
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +18,7 @@ app.use(cors({
 // Parse JSON bodies
 app.use(bodyParser.json());
 
+
 // Database connection configuration
 const dbConfig = {
     host: process.env.DB_HOST,
@@ -24,6 +27,7 @@ const dbConfig = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 };
+
 
 // GET Route - returns a welcome message
 app.get('/', (req, res) => {
