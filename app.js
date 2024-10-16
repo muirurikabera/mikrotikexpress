@@ -21,11 +21,11 @@ app.use(bodyParser.json());
 
 // Database connection configuration
 const dbConfig = {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    host: 'mikrotik-mikrotik-test.b.aivencloud.com',
+    port: 12719,
+    user: 'avnadmin',
+    password: 'AVNS_d3eJ-Wz8EYpUJldlaJy',
+    database: 'mikrotik'
 };
 
 
