@@ -50,7 +50,7 @@ app.post('/validate-code', async (req, res) => {
     console.log("Request made from IP:", clientIp);
 
     if (!code || !mac || !router) {
-        return res.status(400).json({ status: "failure", message: "Invalid JSON. Missing parameters." });
+        return res.status(200).json({ status: "failure", message: "Invalid JSON. Missing parameters." });
     }
 
     try {
@@ -65,7 +65,7 @@ app.post('/validate-code', async (req, res) => {
 
         // Check if any row was returned
         if (rows.length === 0) {
-            return res.status(404).json({ status: "failure", message: "Code not found." });
+            return res.status(200).json({ status: "failure", message: "Code not found." });
         }
 
         const { status, router_id } = rows[0];
@@ -86,6 +86,8 @@ app.post('/validate-code', async (req, res) => {
     } catch (error) {
         console.error("Database error:", error);
         return res.status(500).json({ status: "failure", message: "Internal server error." });
+
+        // create a Failure Log here
     }
 });
 
